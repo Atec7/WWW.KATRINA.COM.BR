@@ -1,0 +1,72 @@
+
+.logo{
+    border-radius: 50%;
+    text-align: center;
+}
+body {
+    padding-top: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(1900deg, yellow,rgb(0, 10, 0));
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 100vh;
+}
+.booking-form {
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width:300px;
+}
+.booking-form h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: yellow;
+}
+.booking-form label {
+    text-align: left;
+    display: block;
+    margin-bottom: 1px;
+    color: yellow;
+}
+.booking-form input,
+.booking-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid yellow;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.booking-form input[type="submit"] {
+    background-color: yellow;
+    color: black;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.10s;
+}
+.booking-form input[type="submit"]:hover {
+    background-color: green;
+}
+.golden-button {
+    background-color: #FFD700;
+    color: black;
+    padding-top: 10px;
+    padding: 15px 30px;
+    font-size: 19px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+.footer{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}

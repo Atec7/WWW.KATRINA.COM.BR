@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="agendamento.css">
+    <title>Agendamento</title>
+</head>
+<body>
+    <div class="booking-form">
+        <img class="logo" src="img/logo.png" width="150" alt="logo">
+        <form id="bookingForm">
+            <label for="date">Data:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="time">Hora:</label>
+            <select id="time" name="time" required>
+                <option value="">Selecione um horário</option>
+                <option value="09:00">09:00</option>
+                <option value="10:00">10:00</option>
+                <option value="11:00">11:00</option>
+                <option value="12:00">12:00</option>
+                <option value="13:00">13:00</option>
+                <option value="14:00">14:00</option>
+                <option value="15:00">15:00</option>
+                <option value="16:00">16:00</option>
+                <option value="17:00">17:00</option>
+            </select>
+            
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="text">Motivo:</label>
+            <input type="text" id="text" name="text" required>
+            
+            <input type="button" value="Solicitar Reagendamento" onclick="sendWhatsAppMessage()">
+            <a href="index.html" class="golden-button">Voltar</a>
+            
+            <p>&copy; 2024 AtecSeven Tecnologia. Todos os direitos reservados.
+        </form>
+    </div>
+    <script>
+        function formatDate(date) {
+            const [year, month, day] = date.split('-');
+            return `${day}/${month}/${year}`;
+        }
+
+        function sendWhatsAppMessage() {
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            const name = document.getElementById('name').value;
+            const text = document.getElementById('text').value;
+
+            if(date && time && name && text) {
+                const formattedDate = formatDate(date);
+                const message = `Gostaria de Reagendar o Meu horário para a data: ${formattedDate} às: ${time}. *MOTIVO DO REAGENDAMENTO: ${text}. Me chamo ${name}*`;
+                const phoneNumber = '5564992952748';
+                const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+                window.open(url, '_blank');
+            } else {
+                alert('Por favor, preencha todos os campos.');
+            }
+        }
+    </script>
+</body>
+</html>

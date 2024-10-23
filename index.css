@@ -1,0 +1,120 @@
+/* Estilos globais */
+body {
+    padding-top: 110px;
+    background: linear-gradient(to right, #333, #111);
+    font-family: 'Arial', sans-serif;
+    color: #f4f4f4;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Logo */
+.logo {
+    text-align: center;
+    border-radius: 50%;
+    border: 5px solid #888;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+/* Botão Dourado */
+.golden-button {
+    background-color: #888;
+    color: #f4f4f4;
+    padding: 15px 30px;
+    font-size: 19px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0; /* Espaçamento entre botões */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+}
+
+.golden-button:hover {
+    background-color: #555;
+    color: #f4f4f4;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Formulário de agendamento */
+.booking-form {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 30px 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.booking-form h2 {
+    margin-top: 0;
+    font-size: 28px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.booking-form label {
+    text-align: left;
+    display: block;
+    margin-bottom: 5px;
+    color: #ccc;
+    font-weight: bold;
+}
+
+.booking-form input,
+.booking-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #888;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #444;
+    color: #f4f4f4;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.booking-form input[type="date"]:focus,
+.booking-form input[type="text"]:focus,
+.booking-form select:focus {
+    border-color: #bbb;
+    background-color: #555;
+}
+
+.booking-form div#services {
+    margin-bottom: 20px;
+}
+
+.booking-form div#services label {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.booking-form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 600px) {
+    .booking-form {
+        padding: 20px;
+    }
+
+    .booking-form input[type="button"] {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
